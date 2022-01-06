@@ -13,7 +13,7 @@ class ActualitesModel extends Model
     public function __construct()
     {
         parent::__construct();
-        $this->table = "actualites";
+        $this->table = "Actualites";
         $this->ordre = "id DESC";
     }
 

@@ -13,7 +13,7 @@ class AdminModel extends Model
     public function __construct()
     {
         parent::__construct();
-        $this->table = "admin";
+        $this->table = "Admin";
         $this->elements = "id, prenom, nom";
     }
 

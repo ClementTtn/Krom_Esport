@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use App\Entity\Actualites_competition;
+use App\Entity\Direction;
 use PDO;
 
-class Actualites_competionModel extends Model
+class DirectionModel extends Model
 {
     protected string $table;
     protected string $ordre;
@@ -13,8 +13,8 @@ class Actualites_competionModel extends Model
     public function __construct()
     {
         parent::__construct();
-        $this->table = "Actualites_competition";
-        $this->ordre = "id DESC";
+        $this->table = "Direction";
+        $this->ordre = "id";
     }
 
 }

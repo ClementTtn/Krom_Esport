@@ -1,9 +1,34 @@
 <?php
 
+use App\Controller\ControllerActualites_competition;
+use App\Entity\Actualites_competition as Actualites_competition;
+
+function chargerClasse($classe)
+{
+    $classe=str_replace('\\','/',$classe);
+    require $classe . '.php';
+}
+
+spl_autoload_register('chargerClasse'); //Autoload
+
+$Actualites_competition = new ControllerActualites_competition();
+
 require 'header.php';
 ?>
 
-<!-- Ajouter la boucle foreach -->
+    <main>
+        <?php
+        if(isset($_GET['id'])){
+            $Actualites_competition->findOne();
+
+            $Actualites_competition->findAlea();
+        }
+
+        else{
+            $Actualites_competition->findListe();
+        }
+        ?>
+    </main>
 
 
 <?php require 'footer.php';?>

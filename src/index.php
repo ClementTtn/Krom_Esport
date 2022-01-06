@@ -1,20 +1,25 @@
 <?php
 
+use App\Controller\ControllerActualites;
+use App\Entity\Actualites as Actualites;
+
+function chargerClasse($classe)
+{
+    $classe=str_replace('\\','/',$classe);
+    require $classe . '.php';
+}
+
+spl_autoload_register('chargerClasse'); //Autoload
+
+$Actualites = new ControllerActualites();
+
+
 require 'header.php';
 ?>
 
     <main>
-        <h2 class="h2_sous_nav">Les dernières actualités de Krom Esport</h2>
-        <!-- Faire une boucle qui affiche les 3 derniers articles -->
+        <?php $Actualites->findDerniers(); ?>
     </main>
 
 
-
-
-
-
-
-
 <?php require 'footer.php'?>
-
-
