@@ -10,7 +10,7 @@ class ControllerActualites
 
     public function __construct()
     {
-        $this->model = new ProgrammationModel();
+        $this->model = new ActualitesModel();
     }
 
     // Affiche un article.
@@ -25,7 +25,14 @@ class ControllerActualites
     public function findListe(){
         $listeArticle=$this->model->findAll();
 
-        require('App/View/getListeArticle.php');
+        require('App/View/getListeArticles.php');
+    }
+
+    // Affiche les derniers articles.
+    public function findDerniers(){
+        $derniersArticles=$this->model->findDerniers();
+
+        require ('App/View/getDerniersArticles.php');
     }
 
     // Affiche le dernier article.

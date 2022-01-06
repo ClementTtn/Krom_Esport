@@ -35,9 +35,9 @@ abstract class Model
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Afficher le prochain élément (en fonction de la date).
-    public function findProchain() : array {
-        $req = $this->connexion->prepare("SELECT * FROM " . $this->table . " ORDER BY " . $this->ordre . " LIMIT 1");
+    // Afficher les derniers articles (en fonction de la date).
+    public function findDerniers() : array {
+        $req = $this->connexion->prepare("SELECT * FROM " . $this->table . " ORDER BY " . $this->ordre . " LIMIT 3");
         $req->execute();
         return $req->fetch(PDO::FETCH_ASSOC);
     }

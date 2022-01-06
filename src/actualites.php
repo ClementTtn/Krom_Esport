@@ -1,10 +1,34 @@
 <?php
 
+use App\Controller\ControllerActualites;
+use App\Entity\Actualites as Actualites;
+
+function chargerClasse($classe)
+{
+    $classe=str_replace('\\','/',$classe);
+    require $classe . '.php';
+}
+
+spl_autoload_register('chargerClasse'); //Autoload
+
+$Actualites = new ControllerActualites();
+
 require 'header.php';
 ?>
 
-<!-- Ajouter foreach php -->
+    <main>
+        <?php
+        if(isset($_GET['id'])){
+            $Actualites->findOne();
 
+            $Actualites->findAlea();
+        }
+
+        else{
+            $Actualites->findListe();
+        }
+        ?>
+    </main>
 
 
 <?php require 'footer.php';?>
