@@ -23,9 +23,9 @@ class ControllerActualites_competition
 
     // Affiche tous les articles.
     public function findListe(){
-        $listeArticle=$this->model->findAll();
+        $listeArticle_competition=$this->model->findAll();
 
-        require('App/View/getListeArticles.php');
+        require('App/View/getListeArticles_competition.php');
     }
 
 }

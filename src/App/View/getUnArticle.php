@@ -10,7 +10,3 @@
 </div>
 
 <h2 class="h2_vue_artiste">Découvrez les autres actualités</h2>
-
-<div class="bouton_billetterie">
-    <a href="actualites.php">Actualités</a>
-</div>

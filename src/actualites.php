@@ -20,8 +20,6 @@ require 'header.php';
         <?php
         if(isset($_GET['id'])){
             $Actualites->findOne();
-
-            $Actualites->findAlea();
         }
 
         else{

@@ -39,7 +39,7 @@ abstract class Model
     public function findDerniers() : array {
         $req = $this->connexion->prepare("SELECT * FROM " . $this->table . " ORDER BY " . $this->ordre . " LIMIT 3");
         $req->execute();
-        return $req->fetch(PDO::FETCH_ASSOC);
+        return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 
 

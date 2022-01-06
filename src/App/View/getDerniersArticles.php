@@ -4,7 +4,7 @@
 
     <div class="collec_img_concert">
         <a href="actualites.php?article=<?=$unArticle['id']?>">
-            <img src=<?=$unArticle['img_article']?> alt="article_01" width="900" height="350">
+            <img src=<?=$unArticle['img_article']?> alt="article_01" width="716" height="403">
         </a>
         <a class="artiste_prog"><?=$unArticle['titre']?></a>
         <br>
