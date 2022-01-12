@@ -4,5 +4,5 @@
     <p class="texte_article"><?=$article['texte']?></p>
     <p><?=$article['video']?></p>
 
-    <a class="redirection_liste_article" href="actualites.php">← Retourner à la liste</a>
+    <a class="redirection_liste_article" href="krom_competition.php">← Retourner à la liste</a>
 </div>

@@ -13,6 +13,19 @@
         padding: 4rem 0rem;
     }
 
+    #header_index{
+        font-size: 200%;
+        padding: 4rem 0rem;
+        background-color: rgba(255,255,255,0.5%);
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    header h1{
+        opacity: 100%;
+    }
+
     #ouverture_menu{
         width: 50px;
         height: 50px;
@@ -35,6 +48,27 @@
     .a_admin{
         font-size: 50%;
     }
+
+    .img_header img{
+        opacity: 0.75;
+        position: absolute;
+        z-index: -1;
+        width: 1920px;
+    }
+
+    .reseaux_header{
+
+    }
+
+    .reseaux_header img{
+        filter: invert(1);
+    }
+
+    #header_index{
+        margin-top: 30rem;
+    }
+
+
 
 
     /*------------------------index.php------------------------*/

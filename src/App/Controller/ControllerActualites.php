@@ -75,5 +75,4 @@ class ControllerActualites
         }
         require ('../App/View/getAddArticle.php');
     }
-
 }

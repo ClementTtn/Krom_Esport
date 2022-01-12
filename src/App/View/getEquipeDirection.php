@@ -1,9 +1,11 @@
 <?php foreach($listeEquipeDirection as $unePersonne) : ?>
 
-    <div class="collec_img_concert">
-        <img src=<?=$unePersonne['img']?> alt="personne_01" width="304" height="376">
+    <div class="collec_membres">
+        <a href="<?=$unePersonne['lien']?>">
+            <img src=<?=$unePersonne['img']?> alt="personne_krom" width="304" height="376">
+        </a>
         <br>
-        <a class="artiste_prog"><?=$unePersonne['nom']?></a>
+        <a class="nom_membres"><?=$unePersonne['nom']?></a>
     </div>
 
 <?php endforeach;?>

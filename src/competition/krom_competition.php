@@ -5,7 +5,7 @@ use App\Entity\Actualites_competition as Actualites_competition;
 
 function chargerClasse($classe)
 {
-    $classe=str_replace('\\','/',$classe);
+    $classe = '../' . str_replace('\\','/', $classe);
     require $classe . '.php';
 }
 
@@ -13,7 +13,7 @@ spl_autoload_register('chargerClasse'); //Autoload
 
 $Actualites_competition = new ControllerActualites_competition();
 
-require 'header.php';
+require 'header_competition.php';
 ?>
 
     <main>
@@ -29,4 +29,4 @@ require 'header.php';
     </main>
 
 
-<?php require 'footer.php';?>
+<?php require 'footer_competition.php';?>

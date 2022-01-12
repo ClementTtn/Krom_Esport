@@ -18,14 +18,14 @@ class ControllerActualites_competition
         $id = htmlspecialchars($_GET['id']);
         $article=$this->model->findOne($id);
 
-        require('App/View/getUnArticle.php');
+        require('../App/View/getUnArticleCompetition.php');
     }
 
     // Affiche tous les articles.
     public function findListe(){
         $listeArticle_competition=$this->model->findAll();
 
-        require('App/View/getListeArticles_competition.php');
+        require('../App/View/getListeArticles_competition.php');
     }
 
 }

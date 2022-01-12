@@ -14,7 +14,7 @@ spl_autoload_register('chargerClasse'); //Autoload
 $Actualites = new ControllerActualites();
 
 
-require 'header.php';
+require 'header_index.php';
 ?>
 
     <main>

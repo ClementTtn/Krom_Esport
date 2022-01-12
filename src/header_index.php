@@ -11,14 +11,30 @@
         <link rel="stylesheet" href="css/ecranlarge.css">
     </head>
 
-
-
     <body>
-        <div class="image_accueil">
-
+        <div class="img_header">
+            <img src="img/img_header.jpg" alt="krom_header" height="1290px" width="1080px">
         </div>
 
-        <header>
+        <div class="reseaux_header">
+            <a href="https://twitter.com/tritonmusicc">
+                <img src="img/reseaux/twitter.svg" alt="twitter_krom" height="32" width="32">
+            </a>
+
+            <a href="https://twitter.com/tritonmusicc">
+                <img src="img/reseaux/twitch.svg" alt="twitch_krom" height="32" width="32">
+            </a>
+
+            <a href="https://twitter.com/tritonmusicc">
+                <img src="img/reseaux/discord.svg" alt="discord_krom" height="32" width="32">
+            </a>
+
+            <a href="https://twitter.com/tritonmusicc">
+                <img src="img/reseaux/instagram.svg" alt="instagram_krom" height="32" width="32">
+            </a>
+        </div>
+
+        <header id="header_index">
             <p><img id="ouverture_menu" src="img/menu.svg" alt="ouverture_menu"></p>
             <h1>
                 <a href="index.php">
