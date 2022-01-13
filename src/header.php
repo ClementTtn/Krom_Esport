@@ -34,6 +34,7 @@
                     <li><a href="actualites.php">Actualités</a></li>
                     <li><a href="equipe.php">L'équipe</a></li>
                     <li><a href="info.php">A propos</a></li>
+                    <li><a href="contact.php">Nous contacter</a></li>
                 </ul>
             </nav>
         </header>

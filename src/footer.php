@@ -29,7 +29,7 @@
 
 
     <div class="contact_footer">
-        <h4><a href="info.php">Nous contacter</a></h4>
+        <h4><a href="contact.php">Nous contacter</a></h4>
     </div>
 
     <div class="pages_footer">
