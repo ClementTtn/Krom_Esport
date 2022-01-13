@@ -34,7 +34,6 @@
                     <li><a href="actualites.php">Actualités</a></li>
                     <li><a href="equipe.php">L'équipe</a></li>
                     <li><a href="info.php">A propos</a></li>
-                    <li><a href="competition/krom_competition.php">Krom Competition</a></li>
                 </ul>
             </nav>
         </header>

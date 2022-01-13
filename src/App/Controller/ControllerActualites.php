@@ -75,4 +75,28 @@ class ControllerActualites
         }
         require ('../App/View/getAddArticle.php');
     }
+
+
+
+    // Permet à l'utilisateur de contacter KROM
+    public function envoyerMessage(){
+        if(isset($_POST['send'])){
+            if (!(empty($_POST['mail']) && empty($_POST['message']))) {
+                //Données de l'ajout.
+                $mail = htmlspecialchars($_POST['mail']);
+                $message = htmlspecialchars($_POST['message']);
+
+                $destinataire = 'krom.esport@gmail.com';
+                $expediteur = $mail;
+                $sujet = "Nouveau message d'un utilisateur depuis le site KROM.";
+                $message = $message
+                ;
+                $entete = 'From: '.$expediteur. "\r\n" . 'Reply-To: '.$expediteur. "\r\n" . 'X-Mailer: PHP/' . phpversion();
+                mail($destinataire, $sujet, $message, $entete);
+
+                $message_systeme = "Votre messsage a bien été envoyé. <br> Nous vous recontacterons très bientôt.";
+            }
+        }
+        require ('App/View/getEnvoyerUnMessage.php');
+    }
 }

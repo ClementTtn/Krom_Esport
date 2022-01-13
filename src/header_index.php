@@ -13,7 +13,7 @@
 
     <body>
         <div class="img_header">
-            <img src="img/img_header.jpg" alt="krom_header" height="1290px" width="1080px">
+            <img src="img/img_header.png" alt="krom_header" height="1290px" width="1080px">
         </div>
 
         <div class="reseaux_header">
@@ -50,7 +50,6 @@
                     <li><a href="actualites.php">Actualités</a></li>
                     <li><a href="equipe.php">L'équipe</a></li>
                     <li><a href="info.php">A propos</a></li>
-                    <li><a href="competition/krom_competition.php">Krom Competition</a></li>
                 </ul>
             </nav>
         </header>
