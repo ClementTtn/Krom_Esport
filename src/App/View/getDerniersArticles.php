@@ -11,7 +11,7 @@ function tronquer_texte($texte, $longeur_max = 110){
     }
 ?>
 
-<h2 class="h2_sous_nav">Les derniers articles de Krom Esport</h2>
+<h2>Les derniers articles de Krom Esport</h2>
 
 <?php foreach($derniersArticles as $unArticle) : ?>
 

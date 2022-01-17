@@ -452,7 +452,22 @@ footer h4{
 
 /*-----------------------Admin-------------------------*/
 
+/*------------------login_admin.php--------------------*/
+.h2_sous_nav_admin{
+    margin-top: 25rem;
+    padding: 2rem;
+}
+
+.formulaire_admin{
+    margin-top: 10rem;
+}
+
+
 /*---------------------index.php-----------------------*/
+.a_admin{
+    margin-bottom: 5rem;
+}
+
 .a_admin a{
     text-decoration: none;
     color: white;
@@ -466,6 +481,57 @@ footer h4{
     margin-top: 20rem;
 }
 
+.liens_admin{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.liens_admin_enfant{
+    border: 3px solid rgba(222, 254, 54, 1);
+    margin: 4rem auto;
+    padding: 3rem;
+    width: 600px;
+
+}
+
+.liens_admin_enfant .a_admin{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+}
+
+.redirection_admin{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.redirection_admin a{
+    color: black;
+    text-decoration: none;
+    background-color: rgba(222, 254, 54, 1);
+    padding: 2rem;
+}
+
+.redirection_admin_acceuil{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.redirection_admin_acceuil a{
+    color: black;
+    text-decoration: none;
+    background-color: rgba(222, 254, 54, 1);
+    padding: 2rem;
+}
+
 
 
 
@@ -475,9 +541,6 @@ footer h4{
 
 
 /*-----------formulaire pour toutes les pages----------*/
-.formulaire{
-}
-
 .formulaire div{
     margin-bottom: 4rem;
 }
@@ -517,6 +580,7 @@ footer h4{
     height: 400px;
     width: 400px;
     margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .bouton{
@@ -544,6 +608,14 @@ footer h4{
     color: black;
 }
 
+.redirection_formulaire{
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10rem;
+}
+
 .informations_incorrectes{
     display: flex;
     justify-content: center;
@@ -551,11 +623,11 @@ footer h4{
 }
 
 .cache{
-    color: black;
+    filter: invert(1);
 }
 
 .visible{
-    color: black;
+    filter: invert(1);
 }
 
 #texte_article{

@@ -1,32 +1,48 @@
 <?php
-include ('../connexion.php');
-$connexion=connexionBd();
+session_start();
+
+function chargerClasse($classe)
+{
+    $classe = '../' . str_replace('\\','/', $classe);
+    require $classe . '.php';
+}
+
+spl_autoload_register('chargerClasse');
 
 require 'header_admin.php';
 ?>
 
 <?php if(isset($_SESSION['id_admin'])) : ?>
 
-    <body>
+    <main>
+        <h2 class="h2_sous_nav">Administration</h2>
+        <div class="liens_admin">
+            <div class="liens_admin_enfant">
+                <a class="a_admin" href="ajout_article.php">Ajouter un article.</a>
+                <div class="redirection_admin">
+                    <a href="ajout_article.php">Y accéder</a>
+                </div>
+            </div>
 
-    <div class="a_admin">
-        <main>
-            <h2 class="h2_sous_nav"><a href="ajout_article.php">Ajouter une programmation Krom</a></h2><br>
-            <h2><a href="ajout_article_competition.php">Ajouter une programmation Krom Competition</a></h2><br>
-            <h2><a href="ajout_admin.php">Autoriser une personne à accéder à la partie administration.</a></h2><br>
-        </main>
+            <div class="liens_admin_enfant">
+                <a class="a_admin" href="archiver_article.php">Archiver un article.</a>
+                <div class="redirection_admin">
+                    <a href="archiver_prog.php">Y accéder</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
 
 
-        <!-- Lien vers index.php -->
-        <h3 class="index_client"><a href="../index.php">Acceuil site client</a></h3>
-
-        <h3 class="index_client"><a href="logout.php">Déconnexion</a></h3>
+    <div class="redirection_admin_acceuil">
+        <a href="logout.php">Acceuil site client</a>
     </div>
 
     </body>
 
 <?php else : ?>
-    <?php header('location: logout.php'); ?>
+    <?php header('location: login_admin.php'); ?>
 <?php endif ;?>
 
 </html>

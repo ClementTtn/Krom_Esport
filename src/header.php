@@ -25,7 +25,7 @@
                     <img src="img/krom_header.png" alt="krom_header" height="53" width="360">
                 </a>
             </h1>
-            <a href="admin/login.php"><img id="img_compte" src="img/compte.svg" alt="img_compte"></a>
+            <a href="admin/login_admin.php"><img id="img_compte" src="img/compte.svg" alt="img_compte"></a>
 
             <nav id="fermé" class="menu">
                 <ul>

@@ -35,13 +35,6 @@ class ControllerActualites
         require ('App/View/getDerniersArticles.php');
     }
 
-    // Affiche le dernier article.
-    public function findDernier(){
-        $derniereProgrammation=$this->model->findDernier();
-
-        require ('App/View/getDerniereProgrammation.php');
-    }
-
 
     // Ajoute un nouvel article (depuis l'espace "Admin").
     public function ajouterArticle(){
@@ -50,12 +43,11 @@ class ControllerActualites
         $info_transfert="";
 
         if(isset($_POST['send'])){
-            if (!(empty($_POST['titre']) && empty($_POST['date_parution']) && empty($_POST['sous_titre']) && empty($_POST['texte']) && empty($_FILES)) && $_FILES['img_article']['error'] == 0 && $_FILES['img_texte_1']['error'] == 0 && $_FILES['img_texte_2']['error'] == 0 && $_FILES['img_texte_3']['error'] == 0 && $_FILES['img_texte_4']['error'] == 0 && empty($_POST['video']) && empty($_POST['auteur'])) {
+            if (!(empty($_POST['titre']) && empty($_POST['date_parution']) && empty($_POST['texte']) && empty($_FILES)) && $_FILES['img_article']['error'] == 0 && $_FILES['img_texte_1']['error'] == 0 && $_FILES['img_texte_2']['error'] == 0 && $_FILES['img_texte_3']['error'] == 0 && $_FILES['img_texte_4']['error'] == 0 && empty($_POST['video']) && empty($_POST['auteur'])) {
 
                 //Données de l'ajout.
                 $titre = htmlspecialchars($_POST['titre']);
                 $date_parution = htmlspecialchars($_POST['date_parution']);
-                $sous_titre = htmlspecialchars($_POST['sous_titre']);
                 $texte = htmlspecialchars($_POST['texte']);
                 $video = htmlspecialchars($_POST['video']);
                 $auteur = htmlspecialchars($_POST['auteur']);
@@ -67,13 +59,33 @@ class ControllerActualites
 
                 // Insertion de la programmation.
                 $data = "programmation (nom_artiste, date_programmation, description, img_artiste, tarif) 
-                                        VALUES ('$nom_artiste', '$date_programmation', '$description', '$img_artiste', '$tarif')";
+                                        VALUES ('$titre', '$date_parution', '$texte', '$img_article', '$tarif')";
                 $ajouterProgrammation=$this->model->insert($data);
 
                 $message_systeme = "Nouvelle programmation ajoutée au site.";
             }
         }
         require ('../App/View/getAddArticle.php');
+    }
+
+    // Archive une programmation quand elle est passée.
+    public function archiverProgrammation(){
+        if(isset($_POST['send'])){
+            if (!(empty($_POST['nom_artiste']))) {
+                $nom_artiste = htmlspecialchars($_POST['nom_artiste']);
+
+                // Copie des données dans la table "archive-programmation'.
+                $data1 = "archive_programmation (id, nom_artiste, date_programmation, description, img_artiste, tarif)";
+                $data2 = "id, nom_artiste, date_programmation, description, img_artiste, tarif FROM programmation";
+                $ajouterProgrammation=$this->model->transfert($data1, $data2, $nom_artiste);
+
+                //Suppression des données dans la table "programmation".
+                $supprimerProgrammation=$this->model->deleteProg($nom_artiste);
+
+                header('Location: index.php');
+            }
+        }
+        require('../App/View/getArchiverProgrammation.php');
     }
 
 

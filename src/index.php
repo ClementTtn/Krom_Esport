@@ -48,6 +48,8 @@ require 'header_index.php';
         <a class="texte_chiffres">Et ce n'est que le début de notre longue histoire....</a>
     </div>
 
+    <a class="separation_footer"></a>
+
     <main>
         <?php $Actualites->findDerniers(); ?>
     </main>
