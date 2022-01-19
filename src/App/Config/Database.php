@@ -11,13 +11,6 @@ class Database{
     private string $username = "root";
     private string $password = "root";
 
-    /* Connexion vrs la base de données du serveur
-    private string $host = "localhost";
-    private string $db_name = "u932903713_krom";
-    private string $username = "u932903713_krom";
-    private string $password = "1EafVN!lNX[F";
-    */
-
 
     private PDO $conn;
 

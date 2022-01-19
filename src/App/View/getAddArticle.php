@@ -21,33 +21,13 @@
                     </p>
 
                     <p>
-                        <label for="img_couverture">Image de couverture :</label>
-                        <input type="file" id="img_couverture" name="img_couverture" accept="image/png" required/>
-                    </p>
-
-                    <p>
-                        <label for="img_1">Image n°1 :</label>
-                        <input type="file" id="img_1" name="img_1" accept="image/png" required/>
-                    </p>
-
-                    <p>
-                        <label for="img_2">Image n°2 :</label>
-                        <input type="file" id="img_2" name="img_2" accept="image/png" required/>
-                    </p>
-
-                    <p>
-                        <label for="img_3">Image n°3 :</label>
-                        <input type="file" id="img_3" name="img_3" accept="image/png" required/>
-                    </p>
-
-                    <p>
-                        <label for="img_4">Image n°4 :</label>
-                        <input type="file" id="img_4" name="img_4" accept="image/png" required/>
+                        <label for="img_article">Images :</label>
+                        <input type="file" id="file" name="file[]" accept="image/png" multiple required/>
                     </p>
 
                     <p>
                         <label for="video">Vidéo : </label>
-                        <input type="text" id="video" name="video" required/>
+                        <input type="text" id="video" name="video"/>
                     </p>
 
                     <p>
@@ -60,12 +40,15 @@
                     </p>
                 </form>
 
-                <?php if($enregistrement) : ?>
-                    <a><?=$info_transfert;?></a>
-                <?php endif; ?>
+                <?php
+                if(isset($_POST['send']))
+                    foreach ($_FILES['file']['name'] as $filename) {
+                        echo $filename.'<br/>';
+                    }
+                ?>
 
                 <?php if(isset($message_systeme)) : ?>
-                    <a><?=$message_systeme?></a>
+                    <a class="message_systeme"><?=$message_systeme?></a>
                 <?php endif ; ?>
             </div>
         </div>

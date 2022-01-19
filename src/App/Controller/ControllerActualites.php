@@ -43,7 +43,7 @@ class ControllerActualites
         $info_transfert="";
 
         if(isset($_POST['send'])){
-            if (!(empty($_POST['titre']) && empty($_POST['date_parution']) && empty($_POST['texte']) && empty($_FILES)) && $_FILES['img_article']['error'] == 0 && $_FILES['img_texte_1']['error'] == 0 && $_FILES['img_texte_2']['error'] == 0 && $_FILES['img_texte_3']['error'] == 0 && $_FILES['img_texte_4']['error'] == 0 && empty($_POST['video']) && empty($_POST['auteur'])) {
+            if (!(empty($_POST['titre']) && empty($_POST['date_parution']) && empty($_POST['texte']) && empty($_POST['auteur']) && empty($_FILES))) {
 
                 //Données de l'ajout.
                 $titre = htmlspecialchars($_POST['titre']);
@@ -53,16 +53,16 @@ class ControllerActualites
                 $auteur = htmlspecialchars($_POST['auteur']);
 
                 // Informations de transfert de l'image associée à la programmation.
-                $enregistrement = move_uploaded_file($_FILES["img_artiste"]["tmp_name"], "../img/programmation.php/" . $_FILES["img_artiste"]["name"]);
-                $info_transfert .= "Le fichier a bien été transféré sous le nom: " . $_FILES["img_artiste"]["name"];
-                $img_artiste = "img/programmation.php/" . $_FILES["img_artiste"]["name"];
+                $enregistrement = move_uploaded_file($_FILES["img_article"]["tmp_name"], "../img/article/" . $_FILES["img_article"]["name"]);
+                //$info_transfert .= "Le fichier a bien été transféré sous le nom: " . $_FILES["img_article"]["name"];
+                $img_article = "img/article/" . $_FILES["img_article"]["name"];
 
                 // Insertion de la programmation.
-                $data = "programmation (nom_artiste, date_programmation, description, img_artiste, tarif) 
-                                        VALUES ('$titre', '$date_parution', '$texte', '$img_article', '$tarif')";
+                $data = "Actualites (titre, date_parution, texte, video, auteur) 
+                                        VALUES ('$titre', '$date_parution', '$texte', '$video', '$auteur')";
                 $ajouterProgrammation=$this->model->insert($data);
 
-                $message_systeme = "Nouvelle programmation ajoutée au site.";
+                $message_systeme = "Article ajouté au site.";
             }
         }
         require ('../App/View/getAddArticle.php');

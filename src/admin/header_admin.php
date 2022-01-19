@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Triton | Accueil</title>
+    <title>KROM | Administration</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
     </style>
