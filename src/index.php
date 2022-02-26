@@ -14,7 +14,7 @@ spl_autoload_register('chargerClasse'); //Autoload
 $Actualites = new ControllerActualites();
 
 
-require 'header_index.php';
+require 'require/header_index.php';
 ?>
 
     <div class="quelques_chiffres_global">
@@ -45,7 +45,7 @@ require 'header_index.php';
             <a class="detail_chiffres">(en janvier 2022)</a>
         </ul>
 
-        <a class="texte_chiffres">Et ce n'est que le début de notre longue histoire....</a>
+        <a class="texte_chiffres">Et ce n'est que le début de notre longue histoire...</a>
     </div>
 
     <a class="separation_footer"></a>
@@ -55,4 +55,4 @@ require 'header_index.php';
     </main>
 
 
-<?php require 'footer.php'?>
+<?php require 'require/footer.php'?>

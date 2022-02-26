@@ -17,17 +17,25 @@ spl_autoload_register('chargerClasse'); //Autoload
 $Equipe = new ControllerEquipe();
 $Direction = new ControllerDirection();
 
-require 'header.php';
+require 'require/header.php';
 ?>
+<title>KROM Esport - Équipe</title>
 
     <main>
-        <h2 class="h2_sous_nav">Direction</h2>
-        <?php $Direction->findDirection(); ?>
+        <?php
+        if(isset($_GET['id_staff'])){
+            $Direction->findOneStaff();
+        }
 
+        elseif(isset($_GET['id_pilote'])){
+            $Equipe->findOnePilote();
+        }
 
-        <h2>Pilotes</h2>
-        <?php $Equipe->findEquipe(); ?>
+        else{
+            $Direction->findDirection();
+            $Equipe->findEquipe();
+        }
+        ?>
     </main>
 
-
-<?php require 'footer.php';?>
+<?php require 'require/footer.php';?>

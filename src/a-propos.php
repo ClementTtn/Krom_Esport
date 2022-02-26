@@ -1,13 +1,20 @@
 <?php
-require 'header.php';
+require 'require/header.php';
 ?>
+<title>KROM Esport - À propos</title>
+
+<meta property="og:site_name" content="KROM Esport">
+<meta property="og:image" content="https://krom-esport.fr/img/logos/krom_logo.png">
+<meta property="og:title" content="À propos de KROM Esport">
+<meta property="og:description" content="Découvrez l'histoire de KROM Esport, depuis ses débuts jusqu'à maintenant.">
+<meta name="description" content="Découvrez l'histoire de KROM Esport, depuis ses débuts jusqu'à maintenant.">
 
 <main>
     <h2 class="h2_sous_nav">Notre histoire</h2>
     <p class="texte_info"><a class="chiffres_couleur">KROM Esport</a> est une équipe française de compétition automobile sur diverses simulations virtuelles.<br><br>
-        À l'origine, KROM était une écurie inscrite dans un championnat de Formule 1, mis en place par la communauté VRC. <a class="chiffres_couleur">Nico et JB</a> sont à l'origine de cette écurie, en <a class="chiffres_couleur">décembre 2019</a>. <br><br>
+        À l'origine, KROM était une écurie inscrite dans un championnat de Formule 1, mis en place par la communauté VRC. <a class="chiffres_couleur">Nicolas Dhersin</a> et <a class="chiffres_couleur">Jean-Baptiste "JB" Thoreux</a> sont à l'origine de cette écurie, en <a class="chiffres_couleur">décembre 2019</a>. <br><br>
 
-        C'est en <a class="chiffres_couleur">octobre 2020</a> que l'aventure commence réellement pour KROM. <a class="chiffres_couleur">Daniel De Sousa</a> propose à nos deux compères de créer <a class="chiffres_couleur">KROM Esport</a>, et c'est à ce moment que l'aventure commence. <br>
+        C'est en <a class="chiffres_couleur">octobre 2020</a> que l'aventure commence réellement pour KROM. <a class="chiffres_couleur">Daniel De Sousa</a> propose à nos deux acolytes de créer <a class="chiffres_couleur">KROM Esport</a>, et c'est à ce moment que l'aventure commence. <br>
         Cet événement offre une nouvelle dimension à l'équipe, et surtout de nouvelles ambitions. <br><br>
 
         Le <a class="chiffres_couleur">2 novembre 2020</a> se déroule les 8 heures de Daytona, organisé encore une fois par nos amis de VRC. C'est à cette occasion que KROM participe à sa première endurance en tant qu'écurie à part entière.<br>
@@ -23,4 +30,4 @@ require 'header.php';
 
 </main>
 
-<?php require 'footer.php';?>
+<?php require 'require/footer.php';?>

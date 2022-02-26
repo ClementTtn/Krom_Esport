@@ -18,7 +18,7 @@ foreach( $_POST as $cle => $valeur){
     $value[$cle] = htmlspecialchars($valeur);
 }
 
-require 'header_admin.php';
+require 'header-admin.php';
 ?>
 
 <?php $Admin->login_admin(); ?>
@@ -26,3 +26,5 @@ require 'header_admin.php';
 <script src="../js/main.js"></script>
 
 <script src="../js/mdp.js"></script>
+
+<?php require ('../require/footer.php');

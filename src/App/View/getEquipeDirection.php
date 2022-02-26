@@ -1,11 +1,13 @@
-<?php foreach($listeEquipeDirection as $unePersonne) : ?>
+<div class="equipe_flex">
+    <?php foreach($listeEquipeDirection as $unePersonne) : ?>
 
-    <div class="collec_membres">
-        <a href="<?=$unePersonne['lien']?>">
-            <img src=<?=$unePersonne['img']?> alt="personne_krom" width="304" height="376">
-        </a>
-        <br>
-        <a class="nom_membres"><?=$unePersonne['nom']?></a>
-    </div>
+        <div class="collec_membres">
+            <a href="<?=$unePersonne['lien']?>" target="_blank">
+                <img src=<?=$unePersonne['img']?> alt="personne_krom">
+            </a>
+            <br>
+            <a class="nom_membres"><?=$unePersonne['nom']?></a>
+        </div>
 
-<?php endforeach;?>
+    <?php endforeach;?>
+</div>

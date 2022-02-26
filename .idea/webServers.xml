@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b7c23648-6f79-4db4-9648-0b25fb10a024" name="KROM">
+        <fileTransfer accessType="SFTP" host="51.91.153.31" port="65002" sshConfigId="1ae03188-1d3a-494c-93a3-3510cee32969" sshConfig="u150159319@51.91.153.31:65002 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

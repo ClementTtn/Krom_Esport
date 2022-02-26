@@ -5,6 +5,7 @@ namespace App\Model;
 use App\Entity\Actualites;
 use PDO;
 
+// Model de la classe Actualites
 class ActualitesModel extends Model
 {
     protected string $table;

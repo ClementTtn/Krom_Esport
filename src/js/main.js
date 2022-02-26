@@ -8,7 +8,7 @@ function init(){
 
 function ouverture(){	                                                                                                // Ouvre le menu ou le ferme.
     if (document.querySelectorAll("#fermé").length > 0){ 			                                            // On vérifie si il y a bien un id "fermé" dans le html.
-        document.getElementsByClassName("menu")[0].id = "ouvert";	                                            // On change l'id par "ouvert" en cherchant l'id via la classe "menu".
+        document.getElementsByClassName("menu")[0].id = "ouvert";	                                        // On change l'id par "ouvert" en cherchant l'id via la classe "menu".
         console.log("Ouverture du menu.");
     }
 

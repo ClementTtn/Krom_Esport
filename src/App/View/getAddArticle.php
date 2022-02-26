@@ -1,65 +1,60 @@
-<?php if(isset($_SESSION['id_admin'])) : ?>
+<main>
+    <h2 class="h2_sous_nav_admin">Ajout d'un article</h2>
 
-    <main>
-        <h2 class="h2_sous_nav_admin">Ajout d'un article</h2>
-        <div class="formulaire_admin">
-            <div class="formulaire">
-                <form id="formulaire" enctype="multipart/form-data" method="post" action="ajout_article.php">
-                    <p>
-                        <label for="titre">Titre</label>
-                        <input type="text" id="titre" name="titre" required/>
-                    </p>
+    <!-- Message de confirmation de l'ajout -->
+    <?php if(isset($message_systeme)) : ?>
+        <a class="message_systeme"><?=$message_systeme?></a>
+    <?php endif ; ?>
 
-                    <p>
-                        <label for="date_parution">Date de parution</label>
-                        <input type="date" id="date_parution" name="date_parution" required/>
-                    </p>
+    <!-- Formulaire d'ajout -->
+    <div class="formulaire_admin">
+        <div class="formulaire">
+            <form id="formulaire" enctype="multipart/form-data" method="post" action="ajout-article">
+                <p>
+                    <label for="titre">Titre :</label><br>
+                    <input type="text" id="titre" name="titre" required/>
+                </p>
 
-                    <p>
-                        <label for="texte">Texte :</label>
-                        <textarea id="texte" name="texte" required> </textarea>
-                    </p>
+                <p>
+                    <label for="date_parution">Date de parution :</label>
+                    <input type="date" id="date_parution" name="date_parution" required/>
+                </p>
 
-                    <p>
-                        <label for="img_article">Images :</label>
-                        <input type="file" id="file" name="file[]" accept="image/png" multiple required/>
-                    </p>
+                <p>
+                    <label for="texte">Texte :</label><br>
+                    <textarea id="texte" name="texte" required> </textarea>
+                </p>
 
-                    <p>
-                        <label for="video">Vidéo : </label>
-                        <input type="text" id="video" name="video"/>
-                    </p>
+                <p>
+                    <label for="img_couverture">Image de la couverture :</label>
+                    <input type="file" id="img_couverture" name="img_couverture" accept="image/png" required/>
+                </p>
 
-                    <p>
-                        <label for="auteur">Auteur :</label>
-                        <input type="text" id="auteur" name="auteur" required/>
-                    </p>
+                <p>
+                    <label for="img_article">Images :</label>
+                    <input type="file" id="img_article" name="img_article[]" accept="image/png" multiple/>
+                </p>
 
-                    <p class="bouton">
-                        <input type="submit" value="Publier" name="send"/>
-                    </p>
-                </form>
+                <p>
+                    <label for="video">Vidéo : </label><br>
+                    <input type="text" id="video" name="video"/>
+                </p>
 
-                <?php
-                if(isset($_POST['send']))
-                    foreach ($_FILES['file']['name'] as $filename) {
-                        echo $filename.'<br/>';
-                    }
-                ?>
+                <p>
+                    <label for="auteur">Auteur :</label>
+                    <input type="text" id="auteur" name="auteur" required/>
+                </p>
 
-                <?php if(isset($message_systeme)) : ?>
-                    <a class="message_systeme"><?=$message_systeme?></a>
-                <?php endif ; ?>
-            </div>
+                <p class="bouton">
+                    <input type="submit" value="Publier" name="send"/>
+                </p>
+            </form>
         </div>
-    </main>
-
-    <div class="a_admin">
-        <h3><a href="index.php">Acceuil administration</a></h3>
     </div>
+</main>
 
-    </body>
+<div class="a_admin">
+    <h3><a href="index">Acceuil administration</a></h3>
+</div>
 
-<?php else : ?>
-    <?php header('location: login.php'); ?>
-<?php endif ; ?>
+</body>

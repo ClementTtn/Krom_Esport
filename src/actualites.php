@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 'off');
 
 use App\Controller\ControllerActualites;
 use App\Entity\Actualites as Actualites;
@@ -13,8 +14,9 @@ spl_autoload_register('chargerClasse'); //Autoload
 
 $Actualites = new ControllerActualites();
 
-require 'header.php';
+require 'require/header.php';
 ?>
+    <title>KROM Esport - Actualités</title>
 
     <main>
         <?php
@@ -29,4 +31,4 @@ require 'header.php';
     </main>
 
 
-<?php require 'footer.php';?>
+<?php require 'require/footer.php';?>
