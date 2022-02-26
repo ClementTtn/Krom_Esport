@@ -1,6 +1,8 @@
-<center>
+<p align="center">
+
+Source: https://prograide.com/pregunta/22304/comment-centrer-une-image-dans-le-fichier-readmemd-de-github
 <img src=KROM-Esport.png width = "250" height = "232">
-</center>
+</p>
 
 KROM Esport is a French association of Sim racing, mainly on the game iRacing.
 
