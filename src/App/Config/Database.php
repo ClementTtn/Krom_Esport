@@ -7,9 +7,9 @@ class Database{
 
     // Connexion vers la base de données
     private string $host = "localhost";
-    private string $db_name = "u150159319_krom";
-    private string $username = "u150159319_krom";
-    private string $password = "}&b!9(&-PK4M";
+    private string $db_name = "krom";
+    private string $username = "root";
+    private string $password = "root";
 
 
     private PDO $conn;
